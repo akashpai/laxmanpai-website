@@ -1697,6 +1697,143 @@ footer {
 }
 
 /* ============================================================
+   DECADES GALLERY (curated chronological walk)
+   ============================================================ */
+#paintings {
+  background: var(--white);
+  padding: 110px 0;
+}
+
+#paintings .section-eyebrow {
+  color: var(--teal);
+}
+
+#paintings .section-heading {
+  color: var(--navy);
+}
+
+#paintings .section-heading em {
+  color: var(--teal);
+}
+
+#paintings .section-sub {
+  color: var(--mid-text);
+  margin-bottom: 48px;
+}
+
+.decade-band {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin: 56px 0 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(10, 37, 64, 0.12);
+}
+
+.decade-band:first-of-type {
+  margin-top: 24px;
+}
+
+.db-year {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 1px;
+}
+
+.db-label {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--mid-text);
+  letter-spacing: 1px;
+}
+
+.decade-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.dg-tile {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--ice);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(10, 37, 64, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dg-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(10, 37, 64, 0.15);
+}
+
+.dg-tile img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  cursor: zoom-in;
+  transition: transform 0.4s ease;
+}
+
+.dg-tile:hover img {
+  transform: scale(1.04);
+}
+
+.dg-tile figcaption {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dg-tile .dg-year {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 500;
+}
+
+.dg-tile .dg-title {
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .decade-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .dg-tile img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 640px) {
+  .decade-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .dg-tile img {
+    height: 180px;
+  }
+  .decade-band {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+/* ============================================================
    ARCHIVE PAINTINGS (from laxmanpai.com via Wayback Machine)
    ============================================================ */
 #archive-paintings {

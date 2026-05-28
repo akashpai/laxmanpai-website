@@ -21,7 +21,7 @@ const io = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(
   '.tv2-card, .series-card, .award-v2, .cv2-item, .dig-card, ' +
-  '.stat, .style-pillar, .ps-item, .opening-bq'
+  '.stat, .style-pillar, .ps-item, .opening-bq, .dg-tile'
 ).forEach(el => { el.classList.add('fade-in'); io.observe(el); });
 
 // ---- Lightbox ----
@@ -44,7 +44,7 @@ function closeLightbox() {
 }
 
 // Trigger on painting images and dignitary photos
-document.querySelectorAll('.ps-image-wrap img, .dignitary-photo, .av2-img-strip img').forEach(img => {
+document.querySelectorAll('.ps-image-wrap img, .dignitary-photo, .av2-img-strip img, .dg-tile img').forEach(img => {
   img.style.cursor = 'zoom-in';
   img.addEventListener('click', () => {
     openLightbox(img.src, img.alt, img.getAttribute('data-caption'));
